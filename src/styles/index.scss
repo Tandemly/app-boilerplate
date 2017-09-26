@@ -1,0 +1,33 @@
+// Web fonts via CDN
+@import url("//fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,600,700");
+@import url("//fonts.googleapis.com/css?family=Raleway:100,200,300,400,600,700");
+
+// Custom overrides for variables
+@import "./custom_variables.scss";
+
+$colors: map-merge($colors, $additional-colors);
+
+// Base style framework
+@import "bulma/bulma";
+
+// Other custom styles/components
+// button.is-accent {
+//   background-color: $accent;
+//   border-color: transparent;
+//   color: $accent-inverse;
+// }
+// button.is-secondary {
+//   background-color: $secondary;
+//   border-color: transparent;
+//   color: $secondary-inverse;
+// }
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: nth($color, 1);
+    color: nth($color, 2);
+  }
+  .text-#{$name} {
+    color: nth($color, 1);
+  }
+}
