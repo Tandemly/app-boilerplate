@@ -22,8 +22,10 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "build-css":
+      "node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles/ -o src/styles/",
+    "watch-css":
+      "npm run build-css && node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles/ -o src/styles/ --watch --recursive",
     "flow": "flow",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
@@ -37,6 +39,8 @@
     "bulma": "^0.5.3",
     "classnames": "^2.2.5",
     "color": "^2.0.0",
+    "custom-react-scripts": "^0.2.0",
+    "empty": "^0.10.1",
     "eslint-config-prettier": "^2.5.0",
     "eslint-plugin-flowtype": "^2.35.1",
     "eslint-plugin-prettier": "^2.3.1",
@@ -44,6 +48,9 @@
     "flow-bin": "^0.55.0",
     "prettier": "^1.7.0",
     "prettier-eslint": "^8.1.1",
+    "raw-loader": "^0.5.1",
+    "react-styleable": "^3.2.0",
+    "react-svg-inline": "^2.0.0",
     "webpack-merge": "^4.1.0"
   }
 }

@@ -8,7 +8,7 @@
 $colors: map-merge($colors, $additional-colors);
 
 // Base style framework
-@import "bulma/bulma";
+@import "../../node_modules/bulma/bulma.sass";
 
 // Other custom styles/components
 // button.is-accent {

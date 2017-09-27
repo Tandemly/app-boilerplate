@@ -1,9 +1,10 @@
 // @flow
 import React from "react";
 import cx from "classnames";
+import styles from "./styles.module.scss";
 
 // base classes for component
-const classes = ["button"];
+const classes = ["button", styles.button];
 type Props = {
   /** the text label on the button */
   children?: string,
