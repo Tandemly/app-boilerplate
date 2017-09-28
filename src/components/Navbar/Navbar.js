@@ -1,10 +1,11 @@
 // @flow
 import * as React from "react";
-// import logo from "../../images/tandemly-full-logo-black-white.svg";
 import cx from "classnames";
-
+import css from "./styles.module.scss";
 import { Toggle } from "../../util/component-utils";
+import NavbarMenuToggle from "./NavbarMenuToggle";
 
+console.log("styles:", css);
 const { Component } = React;
 const noop = () => void 0;
 
@@ -36,7 +37,7 @@ const Navbar = ({
 }: PropTypes) => {
   const styles = {};
   const classes = {
-    main: cx("navbar is-transparent", classNames),
+    main: cx(css.navbar, "navbar", "is-transparent", classNames),
     burger: "button navbar-burger",
     menu: cx("navbar-menu")
   };
@@ -59,18 +60,8 @@ const Navbar = ({
           style={styles.nav}
         >
           <div className="navbar-brand">
-            <a className="navbar-item" href="http://bulma.io">
-              {renderLogo()}
-            </a>
-            <button
-              className={classes.burger}
-              style={styles.burger}
-              onClick={onToggle}
-            >
-              <span />
-              <span />
-              <span />
-            </button>
+            {renderLogo()}
+            <NavbarMenuToggle toggled={toggled} onToggle={onToggle} />
           </div>
           <div className={cx(classes.menu, { "is-active": toggled })}>
             <div className="navbar-start">{renderLeftMenu()}</div>

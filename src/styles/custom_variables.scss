@@ -1,5 +1,5 @@
-@import "bulma/sass/utilities/initial-variables";
-@import "bulma/sass/utilities/functions";
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../../node_modules/bulma/sass/utilities/functions.sass";
 
 $primary: #9bca3b;
 
@@ -37,4 +37,4 @@ $title-color: $secondary;
 // $subtitle-strong-color:	$grey-darker;
 // $subtitle-strong-weight:	$weight-semibold;
 
-@import "bulma/sass/utilities/derived-variables";
+@import "../../node_modules/bulma/sass/utilities/derived-variables.sass";

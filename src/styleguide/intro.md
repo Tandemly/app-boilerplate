@@ -32,8 +32,8 @@ a base framework for building custom styles and applications. All styles for the
 
 The application can customize the styles and elements provided by Bulma in two ways:
 
-1. Adding custom styles or overriding Bulma styles through inclusion of new styles added in the `src/styles/` folder.  The application provides a `custom_variables.scss` partial which allows the projec to override Bulma variables/styles and may define global application wide styles within this directory (`@import`ed into the `src/styles/index.scss`).
-2. Using CSS Modules at the React Component level.  This allows each React Component to include it's own specific styles (these should be layout focused and not presentation).  Those local CSS Modules also use SCSS syntax and are imported directly into the React Component `.js`. 
+1. Adding custom styles or overriding Bulma styles through inclusion of new styles added in the `src/styles/` folder.  The application provides a `custom_variables.scss` which allows the projec to override Bulma variables/styles and may define global application wide styles within this directory (`@import`ed into the `src/styles/index.scss`).
+2. Using CSS Modules at the React Component level.  This allows each React Component to include it's own specific styles (_these should be layout focused and not presentation_).  Those local CSS Modules also use SCSS syntax and are imported directly into the React Component `.js`. 
 
 ## Project Organization
 The general setup for the projet is a `create-react-app` project, with the 
@@ -46,10 +46,12 @@ usual folder structures.  The additional folder structure used by the project is
 | ` |-containers/`   | smart/container components strictly for state management |
 | ` |-images/`       | images for importing directly into `.js` files |
 | ` |-styles/`       | custom and overridding styles for application |
-| ` |-styleguide/`   | customized Styleguidist components for rendering styleguide |
+| ` |-styleguide/`   | contains all styleguide related files/components |
+| ` |  |- components/` | customized Styleguidist components for rendering the styleguide |
+| ` |  |- styles/`   | styles specific to the styleguide only |
+| `` |  `- *.md/`` | static styleguide sections not-generated from components |
 | `` `-util/``       | HOCs and other app-wide utilities |
 | `/server/`          | \[*optional*\] if the application needs a node server it should go here |
-| `/docs/` | Static informational guides for the styleguide generator |
 
 Images not imported directly into a `.js` file should be added to the `/public/images` folder and referenced using the `%PUBLIC_URL%` token provided by `create-react-app` for `.html` files or the `process.env.PUBLIC_URL` environment variable in Javascript code. 
 

@@ -1,4 +1,5 @@
 const path = require("path");
+const webpackConfig = require("custom-react-scripts/config/webpack.config.dev.js");
 
 module.exports = {
   components: "src/components/**/[A-Z]*.js",
@@ -10,9 +11,6 @@ module.exports = {
     "src/components/**/index.js",
     "src/components/styleguide/*"
   ],
-  context: {
-    color: require.resolve("color")
-  },
   require: [
     // The Application's specific styles
     path.join(__dirname, "src/styles/index.css"),
@@ -57,6 +55,6 @@ module.exports = {
       components: "src/util/**/[A-Z]*.js",
       isolatedSection: true
     }
-  ]
-  // webpackConfig: webpackConfig
+  ],
+  webpackConfig: webpackConfig
 };
