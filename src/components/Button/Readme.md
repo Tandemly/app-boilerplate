@@ -1,7 +1,10 @@
 A Basic button:
 
 ```js
-<Button text={'Click Me'} />
+<div className="button-example">
+  <Button text={'Click Me'} />
+  <Button>Click Me, Too!</Button>
+</div>
 ```
 
 A primary color button:
@@ -29,3 +32,14 @@ A primary color button:
   <Button text={'Dark'} className="is-dark" />
 </div>
 ```
+
+Overridding buttons styles:
+```js
+// .custom-button is defined by user elsewhere
+let custom = require('!style-loader!css-loader?modules&importLoaders=2&localIdentName=[local]___[hash:base64:5]!../../styleguide/styles/custom.button.css');
+<div className="button-example">
+  {/* .custom-button { color: magenta; font-weight: 700; } */}
+  <Button className="custom-button" >Click Me, Too!</Button>
+  {/* custom is a css-module that uses same classes defined in the component's css-module */}
+  <Button css={custom} >Click Me, Too!</Button>
+</div>

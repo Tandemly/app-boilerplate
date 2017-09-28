@@ -1,26 +1,27 @@
 // @flow
-import React from "react";
+import * as React from "react";
 import cx from "classnames";
+import styleable from "react-styleable";
 import styles from "./styles.module.scss";
 
-// base classes for component
-const classes = ["button", styles.button];
 type Props = {
   /** the text label on the button */
-  children?: string,
+  children?: React.Node,
   /** an alternate way to pass a label to display on the button (overrides `children`) */
   text?: string,
   /** classnames to add to the rendered component */
-  className?: string
+  className?: string,
+  /** style object from react-styleable */
+  css?: { [key: string]: any }
 };
 
 /**
  * A basic button component.
  */
-const Button = (props: Props) => (
-  <button className={cx(classes, props.className)}>
-    {props.text || props.children}
+const Button = ({ children, text, className, css }: Props) => (
+  <button className={cx("button", css.button, className)}>
+    {text || children}
   </button>
 );
 
-export default Button;
+export default styleable(styles)(Button);

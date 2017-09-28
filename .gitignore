@@ -1,7 +1,7 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # CSS is generated in src/
-src/**/*.css
+src/styles/**/*.css
 
 # dependencies
 /node_modules
