@@ -4,15 +4,11 @@ Basic navigation bar for the home page:
 <div style={{ background: '#9BCA3B' }}>
     <Navbar 
         transparent 
-        renderLogo={() =>
-            <a className="navbar-item" href="#">
-                <img src="/tandemly-full-logo-black-white.svg" alt="Tandem.ly Logo" width="112" height="28" /> 
-            </a>
-        }
+        renderLogo={() => <NavbarLogo img="/tandemly-full-logo-black-white.svg" alt="Tandem.ly Logo" href="http://tandem.ly" />}
         renderLeftMenu={() => [
-            <a href="#" className="navbar-item">One</a>,
-            <a href="#" className="navbar-item">Two</a>,
-            <a href="#" className="navbar-item is-active">Three</a>,
+            <NavbarLink>One</NavbarLink>
+            <NavbarLink>Two</NavbarLink>
+            <NavbarLink className="is-active">Three</NavbarLink>
         ]}
     />
 </div>
