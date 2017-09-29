@@ -35,7 +35,6 @@ A primary color button:
 
 Overridding buttons styles:
 ```js
-// .custom-button is defined by user elsewhere
 let custom = require('!style-loader!css-loader?modules&importLoaders=2&localIdentName=[local]___[hash:base64:5]!../../styleguide/styles/custom.button.css');
 <div className="button-example">
   {/* .custom-button { color: magenta; font-weight: 700; } */}

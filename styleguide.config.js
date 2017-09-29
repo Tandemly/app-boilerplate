@@ -17,8 +17,15 @@ module.exports = {
     // Styles solely for react-styleguide
     path.join(__dirname, "src/styleguide/styles/styles.css")
   ],
+  context: {
+    React: "react"
+  },
   styleguideComponents: {
-    Logo: path.join(__dirname, "src/styleguide/components/Logo.js")
+    Logo: path.join(__dirname, "src/styleguide/components/Logo.js"),
+    ExamplesRenderer: path.join(
+      __dirname,
+      "src/styleguide/components/Examples.js"
+    )
   },
   template: path.join(__dirname, "src/styleguide/template.html"),
   assetsDir: "./src/images",

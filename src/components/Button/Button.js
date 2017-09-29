@@ -2,8 +2,9 @@
 import * as React from "react";
 import cx from "classnames";
 import styleable from "react-styleable";
-import styles from "./styles.module.scss";
+import css from "./styles.module.scss";
 
+console.log("css:", css);
 type Props = {
   /** the text label on the button */
   children?: React.Node,
@@ -18,10 +19,10 @@ type Props = {
 /**
  * A basic button component.
  */
-const Button = ({ children, text, className, css }: Props) => (
+const Button = ({ children, text, className, css = {} }: Props) => (
   <button className={cx("button", css.button, className)}>
     { (text || children) && <span>{text || children}</span> }
   </button>
 );
 
-export default styleable(styles)(Button);
+export default styleable(css)(Button);
