@@ -15,7 +15,7 @@ const styles = ({ color, fontFamily, fontSize }) => ({
 export function LogoRenderer({ classes, children }) {
   return (
     <h1 className={classes.logo}>
-      <span className="fa fa-leanpub" /> {children}
+      {children}
     </h1>
   );
 }
