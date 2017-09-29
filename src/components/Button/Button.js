@@ -20,7 +20,7 @@ type Props = {
  */
 const Button = ({ children, text, className, css }: Props) => (
   <button className={cx("button", css.button, className)}>
-    {text || children}
+    { (text || children) && <span>{text || children}</span> }
   </button>
 );
 
